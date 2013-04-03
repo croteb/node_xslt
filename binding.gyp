@@ -10,8 +10,11 @@
           '-lexslt'
           ]
       },
-      'cflags': ['<!@(xml2-config --cflags)','-fexceptions'],
-      'cc_flags': ['<!@(xml2-config --cflags)','-fexceptions'],
+      'cflags': [
+        '<!@(xml2-config --cflags)',
+        '-fexceptions'
+      ],
+      'cflags_cc': ['-fexceptions'],
       'conditions': [
         ['OS=="win"', {
           # no Windows support yet...
