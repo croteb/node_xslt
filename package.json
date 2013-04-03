@@ -6,9 +6,10 @@
         "node": ">=0.1.93"
     },
     "dependencies": {
+    	"node-gyp": "=0.9.5"
     },
     "scripts": {
-        "preinstall": "node-waf distclean || (exit 0); node-waf configure build"
+        "preinstall": "node-gyp clean || (exit 0); node-gyp configure build"
     },
     "description": "A simple XSLT package for node.js",
     "author": "Brian Suh <brian.j.suh@gmail.com>",
